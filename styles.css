@@ -1,0 +1,398 @@
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #fbf7e9;
+    --secondary-color: #2D2D2D;
+    --background-color: #FFD580; 
+    --text-color: #2D2D2D;
+    --card-background: #FFFFFF;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: "IBM Plex Sans", sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    padding: 0;
+    margin: 0;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    /* background-color: var(--primary-color); */
+    padding: 2rem 2rem;
+    margin-bottom: 2rem;
+    color: black;
+    /* box-shadow: 0 4px 6px var(--shadow-color); */
+}
+
+.header h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    letter-spacing: 0.05em;
+}
+
+.header p {
+    font-size: 1.4rem;
+    max-width: 600px;
+    margin: 0 auto;
+    opacity: 0.9;
+}
+
+/* Layout */
+.main-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Icon Card */
+.icon-card {
+    color: black;
+    display: flex;
+    margin: 1.5rem 0;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.icon-card img {
+    max-width: 50000px;
+    height: auto;
+    transition: transform 0.2s ease;
+}
+
+/* Cards */
+.instructions,
+.step,
+.extra,
+.block-inventory {
+    background: var(--card-background);
+    border-radius: 20px;
+    box-shadow: 0 8px 16px var(--shadow-color);
+    padding: 2rem;
+    transition: transform 0.2s ease-in-out;
+    border: 2px solid black;
+}
+
+.instructions:hover,
+.step:hover,
+.extra:hover,
+.block-inventory:hover {
+    transform: translateY(-5px);
+}
+
+/* Section Headers */
+h2 {
+    color: var(--secondary-color);
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+/* Instruction Blocks */
+.instruction-blocks {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding: 1.5rem 0;
+    justify-content: center;
+}
+
+.instruction-blocks img {
+    width: 180px;
+    height: 65px;
+    object-fit: contain;
+    transition: transform 0.2s ease;
+}
+
+.instruction-blocks img:hover {
+    transform: scale(1.05);
+}
+
+/* Steps */
+.steps {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.step {
+    position: relative;
+}
+
+.step h2 {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.step p {
+    color: var(--text-color);
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.step .image-container {
+    display: flex;
+    gap: 2rem;
+    margin: 1.5rem 0;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.step .image-container img {
+    max-width: 200px;
+    height: auto;
+    border-radius: 12px;
+    /* box-shadow: 0 4px 8px var(--shadow-color); */
+    transition: transform 0.2s ease;
+    /* object-fit: contain; */
+}
+
+.step .image-container img:hover {
+    transform: scale(1.05);
+}
+
+/* Hints and inline blocks */
+.hints p {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    min-height: 65px;  /* Match block height */
+}
+
+.hints img[src*="/blocks/"] {
+    vertical-align: middle;
+    position: relative;
+    top: 5px;  /* Fine-tune vertical position */
+}
+
+/* Non-block images in hints (like lightbulb) */
+/* .hints img:not([src*="/blocks/"]) {
+    height: 100px;
+    width: auto;
+    filter: brightness(0) invert(1);
+    vertical-align: middle;
+} */
+
+/* Ensure text aligns with blocks */
+p img[src*="/blocks/"] {
+    vertical-align: middle;
+    position: relative;
+    top: 5px;
+}
+
+/* Block styles for all sections */
+[class*="blocks"] img,
+.hints img[src*="/blocks/"],
+.step img[src*="/blocks/"],
+.extra img[src*="/blocks/"],
+.events img,
+.motion img,
+.looks img,
+.control img {
+    width: 180px;
+    height: 65px;
+    object-fit: contain;
+    margin: 0.5rem;
+    filter: drop-shadow(0 4px 8px var(--shadow-color));
+    vertical-align: middle;  /* Added this */
+}
+
+/* Remove the general filter styles and target specific images */
+[src*="/blocks/looks/"],
+img[alt*="Start Trail"],
+img[alt*="End Trail"] {
+    filter: drop-shadow(0 4px 8px var(--shadow-color));
+    /* No color modification - keep original purple */
+}
+
+[src*="/blocks/motion/"],
+img[alt*="Forward"],
+img[alt*="Rotate"] {
+    filter: drop-shadow(0 4px 8px var(--shadow-color));
+    /* No color modification - keep original blue */
+}
+
+[src*="/blocks/control/"],
+img[alt*="Repeat"],
+img[alt*="Forever"] {
+    filter: drop-shadow(0 4px 8px var(--shadow-color));
+    /* No color modification - keep original orange */
+}
+
+[src*="/blocks/events/"],
+img[alt*="When"] {
+    filter: drop-shadow(0 4px 8px var(--shadow-color));
+    /* No color modification - keep original yellow */
+}
+
+/* Block Inventory */
+.block-inventory {
+    background: var(--card-background);
+    margin-top: 2rem;
+    padding: 2rem;
+}
+
+.block-inventory h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.events,
+.motion,
+.looks,
+.control {
+    background: var(--color-primary-white-100, #ffedc5);
+    padding: 1.5rem;
+    border-radius: 15px;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 8px var(--shadow-color);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    border: 2px solid black;
+}
+
+.events h3,
+.motion h3,
+.looks h3,
+.control h3 {
+    color: black;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    width: 100%;
+}
+
+/* Extra section adjustments */
+.extra .image-container {
+    display: flex;
+    gap: 1rem;
+    margin: 1.5rem 0;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    margin-top: 1rem;
+    padding: 2rem;
+    color: black;
+}
+
+/* Hints Card */
+.hints-card {
+    background: #ffedc5;  /* Light yellow background */
+    border-radius: 15px;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    max-width: 1000px;  /* Increased from 500px */
+    width: 95%;  /* Added to make it responsive */
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    display: flex;  /* Added */
+    flex-direction: column;  /* Added */
+    align-items: center;  /* Added */
+}
+
+.hints-card p {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    width: 100%;  /* Added */
+}
+
+.hints-card span {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+}
+
+.hints-card img[src*="/icons/"] {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+.hints-card img[src*="/blocks/"] {
+    width: 120px;  /* Smaller than regular blocks */
+    height: 45px;
+    object-fit: contain;
+}
+
+.hints-card img:not([src*="/blocks/"], [src*="/icons/"]) {
+    max-width: 60%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 0.5rem;
+    display: block;  /* Added */
+    margin-left: auto;  /* Added */
+    margin-right: auto;  /* Added */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 2.5rem;
+    }
+
+    .header p {
+        font-size: 1.2rem;
+    }
+
+    .main-content {
+        padding: 0 1rem;
+    }
+
+    .step .image-container {
+        flex-direction: column;
+    }
+
+    .instruction-blocks img,
+    [class*="blocks"] img,
+    .hints img[src*="/blocks/"],
+    .step img[src*="/blocks/"],
+    .extra img[src*="/blocks/"],
+    .events img,
+    .motion img,
+    .looks img,
+    .control img {
+        width: 150px;
+        height: 55px;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .hints-card {
+        padding: 1rem;
+    }
+
+    .hints-card img[src*="/blocks/"] {
+        width: 100px;
+        height: 38px;
+    }
+}
