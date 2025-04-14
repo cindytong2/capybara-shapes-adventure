@@ -87,7 +87,11 @@ body {
 .instructions:hover,
 .step:hover,
 .extra:hover,
-.block-inventory:hover {
+.block-inventory:hover,
+.events:hover,
+.motion:hover,
+.looks:hover,
+.control:hover   {
     transform: translateY(-5px);
 }
 
@@ -209,6 +213,7 @@ p img[src*="/blocks/"] {
     margin: 0.5rem;
     filter: drop-shadow(0 4px 8px var(--shadow-color));
     vertical-align: middle;  /* Added this */
+    transition: transform 0.2s ease;
 }
 
 /* Remove the general filter styles and target specific images */
@@ -265,6 +270,7 @@ img[alt*="When"] {
     gap: 1rem;
     align-items: center;
     border: 2px solid black;
+    transition: transform 0.2s ease;
 }
 
 .events h3,
