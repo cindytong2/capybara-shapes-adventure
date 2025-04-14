@@ -6,7 +6,6 @@
 }
 
 :root {
-    --primary-color: #fbf7e9;
     --secondary-color: #2D2D2D;
     --background-color: #FFD580; 
     --text-color: #2D2D2D;
@@ -26,11 +25,9 @@ body {
 /* Header */
 .header {
     text-align: center;
-    /* background-color: var(--primary-color); */
     padding: 2rem 2rem;
     margin-bottom: 2rem;
     color: black;
-    /* box-shadow: 0 4px 6px var(--shadow-color); */
 }
 
 .header h1 {
@@ -65,14 +62,15 @@ body {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    gap: 2rem; /* spacing between the two icon-text pairs */
 }
 
-.icon-card img {
-    max-width: 50000px;
-    height: auto;
-    transition: transform 0.2s ease;
+.icon-card div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem; /* small space between icon and text */
 }
-
 /* Cards */
 .instructions,
 .step,
