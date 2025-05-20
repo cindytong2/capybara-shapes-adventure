@@ -1,3 +1,4 @@
+/* Base Styles */
 * {
     margin: 0;
     padding: 0;
@@ -16,29 +17,63 @@ body {
     font-family: "IBM Plex Sans", sans-serif;
     line-height: 1.6;
     color: var(--text-color);
-    background-color: var(--background-color);
+    background: linear-gradient(135deg, #FFD580 0%, #FFE5B4 100%);
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h10v10H0zM10 10h10v10H10z" fill="%232D2D2D" fill-opacity="0.05"/></svg>');
+    opacity: 0.5;
+    z-index: -1;
+    pointer-events: none;
 }
 
 /* Header */
 .header {
     text-align: center;
-    padding: 2rem 2rem;
+    padding: 3rem 2rem;
     margin-bottom: 2rem;
     color: black;
+    position: relative;
+}
+
+.header::before {
+    display: none; /* Remove the header's pattern overlay */
 }
 
 .header h1 {
-    font-size: 3.5rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
+    font-size: 4rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
     letter-spacing: 0.05em;
+    position: relative;
+    text-shadow: 3px 3px 0 rgba(0,0,0,0.1);
+    font-family: "IBM Plex Sans Condensed", sans-serif;
+    background: linear-gradient(45deg, #2D2D2D, #4a4a4a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .header p {
-    font-size: 1.4rem;
-    max-width: 600px;
+    font-size: 1.6rem;
+    max-width: 700px;
     margin: 0 auto;
     opacity: 0.9;
+    position: relative;
+    font-weight: 500;
+    line-height: 1.4;
+    color: #2D2D2D;
+    padding: 0.5rem 1rem;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* Layout */
@@ -51,23 +86,36 @@ body {
     gap: 2rem;
 }
 
+.main-content p {
+    font-family: "IBM Plex Sans", sans-serif;
+}
+
 /* Icon Card */
 .icon-card {
     color: black;
     display: flex;
-    margin: 1.5rem 0;
+    margin: 0;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: 1.5rem;
+    background: var(--color-primary-white-100, #ffedc5);
+    border-radius: 15px;
+    padding: 1.5rem;
+    border: 2px solid black;
+    transition: transform 0.2s ease-in-out;
+    flex: 1;
+    min-width: 250px;
+    position: relative;
 }
 
 .icon-card div {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.3rem;
+    gap: 0.5rem;
 }
+
 /* Cards */
 .instructions,
 .step,
@@ -104,9 +152,20 @@ h2 {
 .instruction-blocks {
     display: flex;
     flex-wrap: wrap;
-    gap: 1.5rem;
+    gap: 2rem;
     padding: 1.5rem 0;
     justify-content: center;
+    align-items: center;
+}
+
+.instruction-blocks .icon-card h3,
+.instruction-blocks .image-container h3 {
+    text-align: center;
+    margin-bottom: 1rem; /* Adjust margin to match block inventory headings */
+    color: black; /* Ensure color is black */
+    font-size: 1.4rem; /* Match block inventory heading font size */
+    font-weight: 600; /* Match block inventory heading font weight */
+    width: 100%; /* Ensure heading takes full width of the card */
 }
 
 .instruction-blocks img {
@@ -118,6 +177,69 @@ h2 {
 
 .instruction-blocks img:hover {
     transform: scale(1.05);
+}
+
+.instruction-blocks .image-container {
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background: var(--color-primary-white-100, #ffedc5);
+    border-radius: 15px;
+    padding: 1.5rem;
+    border: 2px solid black;
+    transition: transform 0.2s ease-in-out;
+    flex: 2;
+    min-width: 300px;
+    position: relative;
+}
+
+.instruction-blocks .blocks-label,
+.instruction-blocks .setup-label {
+    position: absolute;
+    top: -20px; /* Adjust vertical position */
+    left: 50%;
+    transform: translateX(-50%); /* Center horizontally */
+    background: #ffedc5; /* Match card background */
+    border: 2px solid black; /* Add border */
+    padding: 0.3rem 1.5rem; /* Adjust padding for shape */
+    border-radius: 8px; /* Subtle border-radius */
+    font-size: 1rem; /* Adjust font size */
+    font-weight: 600; /* Match heading font weight */
+    color: black; /* Match text color */
+    z-index: 1; /* Ensure it's above the card */
+    white-space: nowrap; /* Prevent text wrapping */
+}
+
+.instruction-blocks .blocks-label::before,
+.instruction-blocks .blocks-label::after,
+.instruction-blocks .setup-label::before,
+.instruction-blocks .setup-label::after {
+    content: '';
+    position: absolute;
+    top: 100%; /* Position at the bottom of the label */
+    border: solid transparent;
+    pointer-events: none;
+    border-color: rgba(136, 183, 213, 0);
+    border-top-color: black; /* Color of the arrow/trapezoid point */
+    border-width: 8px;
+    margin-top: 0px;
+}
+
+.instruction-blocks .blocks-label::before,
+.instruction-blocks .setup-label::before {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.instruction-blocks .blocks-label::after,
+.instruction-blocks .setup-label::after {
+    left: 50%;
+    transform: translateX(-50%);
+    border-top-color: #ffedc5; /* Match background color */
+    margin-top: -2px; /* Adjust to overlap border */
 }
 
 /* Steps */
@@ -135,12 +257,14 @@ h2 {
     display: flex;
     align-items: center;
     gap: 1rem;
+    font-family: "IBM Plex Sans", sans-serif;
 }
 
 .step p {
     color: var(--text-color);
     font-size: 1.2rem;
     margin-bottom: 1.5rem;
+    font-family: "IBM Plex Sans", sans-serif;
 }
 
 .step .image-container {
@@ -284,6 +408,8 @@ img[alt*="When"] {
     margin-top: 1rem;
     padding: 2rem;
     color: black;
+    position: relative;
+    background: transparent;
 }
 
 .footer a {
@@ -347,12 +473,17 @@ img[alt*="When"] {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .header {
+        padding: 2rem 1rem;
+    }
+
     .header h1 {
-        font-size: 2.5rem;
+        font-size: 2.8rem;
     }
 
     .header p {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
+        padding: 0.5rem;
     }
 
     .main-content {
@@ -362,17 +493,6 @@ img[alt*="When"] {
     .step .image-container {
         flex-direction: column;
     }
-
-    /* Base Styles */
-    .image-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 2rem;
-        flex-wrap: wrap;
-        width: 100%;
-    }
-
 
     .instruction-blocks img,
     [class*="blocks"] img,
