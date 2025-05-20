@@ -4,7 +4,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+/* Root Styles */
 :root {
     --secondary-color: #2D2D2D;
     --background-color: #FFD580; 
