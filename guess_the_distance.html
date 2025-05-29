@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Capybara: Shapes Adventure</title>
-  <meta name="description" content="Shapes Adventure: A fun and interactive coding challenge for kids! Learn to draw shapes by walking forward and rotating.">
+  <title>Guess the Distance</title>
+  <meta name="description" content="Guess the Distance: A fun and interactive coding challenge for kids! Learn to draw shapes by walking forward and rotating.">
   <meta name="keywords" content="coding challenge, Scratch blocks, shapes adventure, interactive learning, draw shapes">
   <link rel="canonical" href="https://cindytong2.github.io/capybara-shapes-adventure/" />
   <link rel="icon" href="/assets/images/icons/favicon.ico" type="image/x-icon">
@@ -19,8 +19,8 @@
 </head>
 <body>
   <header class="header">
-    <h1>SHAPES ADVENTURE</h1>
-    <p>Turn your space into a canvas. You'll draw a square and more!</p>
+    <h1>GUESS THE DISTANCE</h1>
+    <p>Look around you and find objects that your Capybara could aim to. Pick one and guess the distance in Capybara steps to reach that object.</p>
   </header>
   <main class="main-content">
     <section class="instructions">
@@ -39,112 +39,45 @@
         </div>
         <div class="image-container">
           <div class="blocks-label">BLOCKS</div>
-          <img src="assets/blocks/looks/StartTrail.png" alt="Start Trail Block"/>
           <img src="assets/blocks/motion/Forward.png" alt="Forward Block"/>
           <img src="assets/blocks/motion/RotateRight.png" alt="Rotate Right Block"/>
-          <img src="assets/blocks/control/Repeat.png" alt="Repeat Block"/>
         </div>
       </div>
     </section>
     <section class="steps">
       <div class="step">
         <h2>1. Planning</h2>
-        <p>Let's draw a square! A square is made by 4 lines, like this:</p>
+        <p>Place your Capybara in your space. Look around and pick an object. It can be a pillow, a toy, a chair or anything you want!</p>
         <div class="image-container">
-          <img src="assets/icons/Square.png" alt="Planning a square">
+          <img src="assets/guess-the-distance/1.1.jpg" alt="Capybara facing away from red pillow">
         </div>
       </div>
       <div class="step">
-        <h2>2. Drawing</h2>
-        <p>
-          Now let's draw it with your Capybara. Let's draw the first line by walking forward a few steps.
-          Begin by trying with a number below 10 to ensure the line is neither too long nor too short.
-        </p>
+        <h2>2. Rotation</h2>
+        <p>Now make your Capybara face that object.</p>
         <div class="image-container">
-          <img src="assets/shapes-adventure/2.1.jpeg" alt="Drawing the first line">
-          <img src="assets/shapes-adventure/2.2.jpeg" alt="Drawing the first line">
+          <img src="assets/guess-the-distance/2.1.jpg" alt="Capybara facing red pillow">
         </div>
         <section class="hints-card">
-          <p>
-            <span>
-              <img src="assets/icons/Lightbulb.png" alt="Idea"> Hint: The order you stack the blocks is very important!
-              <img src="assets/blocks/looks/StartTrail.png" alt="Start Trail"> should be above
-              <img src="assets/blocks/motion/Forward.png" alt="Forward">.
-            </span>
-          </p>
-        </section>
+            <p>
+              <span>
+                <img src="assets/icons/Lightbulb.png" alt="Idea"> Hint: You can do this by rotating your Capybara with
+                <img src="assets/blocks/motion/RotateRight.png" alt="Rotate Right"> or by pinching it with 2 fingers.
+              </span>
+            </p>
+          </section>
       </div>
       <div class="step">
-        <h2>3. Rotation</h2>
-        <p>
-          To make the Capybara draw the second line, first it has to turn. Left or right, it's your choice!
-          Let's use "right" for this example. How much does it have to turn?
-        </p>
-        <div class="hints-card">
-          <p>
-            <span>
-              <img src="assets/icons/Lightbulb.png" alt="Idea"> The numbers in
-              <img src="assets/blocks/motion/RotateRight.png" alt="Rotate Right"> are angles. So, if the Capybara is facing to the front, it should turn 90°
-            </span>
-          </p>
-          <img src="assets/shapes-adventure/3.1.jpeg" alt="Rotation angles diagram">
-        </div>
-        <p>
-          So, let's add that rotation. Your code should look like this:
-        </p>
+        <h2>3. Guess the Distance</h2>
+        <p>Using <img src="assets/blocks/motion/Forward.png" alt="Forward"> guess the distance between your Capybara and the object.</p>
         <div class="image-container">
-          <img src="assets/shapes-adventure/3.2.jpeg" alt="Code for drawing the second line">
+          <img src="assets/guess-the-distance/3.1.jpg" alt="Capybara facing red pillow">
         </div>
-        <p>
-          Now, let's execute that code. This should be the final result:
-        </p>
+        <p>Did you reach the object? Were you far or near? Keep trying until you reach it!</p>
         <div class="image-container">
-          <img src="assets/shapes-adventure/3.3.jpeg" alt="Final result">
+          <img src="assets/guess-the-distance/3.2.jpg" alt="Capybara facing red pillow">
         </div>
       </div>
-      <div class="step">
-        <h2>4. Repeat</h2>
-        <p>
-          Now that we have 1 side of the square, let's draw all of them by repeating our code 4 times.
-        </p>
-        <div class="image-container">
-          <img src="assets/shapes-adventure/4.1.jpeg" alt="Code for drawing the third line">
-        </div>
-        <p><b>Congratulations! You drew a square.</b></p>
-        <div class="image-container">
-          <img src="assets/shapes-adventure/4.2.jpeg" alt="Final result">
-        </div>
-      </div>
-    </section>
-
-    <div class="step">
-      <h2>Take It Further</h2>
-      <p>Now let's optimize the code, making it more efficient, getting the same outcome with less blocks.</p>
-      <p>How can we do it? What blocks seem to be repeated? How many times are they repeated?</p>
-      <p>As you can see, the blocks are repeated four times:</p>
-      <div class="image-container">
-        <img src="assets/shapes-adventure/4.3.jpeg">
-      </div>
-      <p>So let's use:</p>
-      <div class="image-container">
-        <img src="assets/blocks/control/Repeat.png" alt="Repeat block example">
-      </div>
-      <div class="image-container">
-        <img src="assets/shapes-adventure/4.4.jpeg" alt="Repeat">
-      </div>
-      <p>Now you'll have the same square with less coding blocks.</p>
-    </div>
-    <div class="step">
-      <h2>And Beyond!</h2>
-      <p>Now that you know how to draw, walk forward and rotate, let's try one of these drawings! Or imagine new ones and try them!</p>
-      <div class="image-container">
-        <img src="assets/shapes-adventure/4.5.jpeg">
-        <img src="assets/shapes-adventure/4.6.jpeg">
-      </div>
-      <div class="image-container">
-        <img src="assets/shapes-adventure/4.7.jpeg">
-      </div>
-    </div>
     <section class="block-inventory">
       <h2>Block Inventory</h2>
       <div class="events">

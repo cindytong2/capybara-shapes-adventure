@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Capybara: Shapes Adventure</title>
-  <meta name="description" content="Shapes Adventure: A fun and interactive coding challenge for kids! Learn to draw shapes by walking forward and rotating.">
-  <meta name="keywords" content="coding challenge, Scratch blocks, shapes adventure, interactive learning, draw shapes">
+  <title>Capybara: Guess the Word</title>
+  <meta name="description" content="Guess the Word: A fun and interactive coding challenge for kids! Let's make our Capybara spell a secret word.">
+  <meta name="keywords" content="coding challenge, Scratch blocks, guess the word, interactive learning, educational">
   <link rel="canonical" href="https://cindytong2.github.io/capybara-shapes-adventure/" />
   <link rel="icon" href="/assets/images/icons/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="styles.css"/>
@@ -20,16 +20,17 @@
 <body>
   <header class="header">
     <h1>GUESS THE WORD</h1>
-    <p>Let’s make our Capybara spell a secret word</p>
+    <p>Let’s make our Capybara spell a secret word.</p>
   </header>
   <main class="main-content">
     <section class="instructions">
       <h2>What You'll Need</h2>
       <div class="instruction-blocks">
         <div class="icon-card">
+          <div class="setup-label">SETUP</div>
           <div>
             <img src="assets/images/icons/Participants.png" alt="Participants">
-            <p>Participants: 1</p>
+            <p>Participants: 2</p>
           </div>
           <div>
             <img src="assets/images/icons/Devices.png" alt="Devices">
@@ -37,36 +38,46 @@
           </div>
         </div>
         <div class="image-container">
+          <div class="blocks-label">BLOCKS</div>
           <img src="assets/images/blocks/looks/StartTrail.png" alt="Start Trail Block"/>
-          <img src="assets/images/blocks/motion/Forward.png" alt="Forward Block"/>
-          <img src="assets/images/blocks/motion/RotateRight.png" alt="Rotate Right Block"/>
+          <img src="assets/images/blocks/motion/NewForward.png" alt="Forward Block"/>
+          <img src="assets/images/blocks/motion/turn R.jpg" alt="Turn Right Block"/>
         </div>
       </div>
     </section>
     <section class="steps">
       <div class="step">
         <h2>1. Planning</h2>
-        <p>Let's draw a square! A square is made by 4 lines, like this:</p>
+        <p>Scatter the letters of the alphabet on the floor.</p>
+        <p>You can print and cut them, draw them on the floor, or write them however you want!</p>
         <div class="image-container">
-          <img src="assets/images/icons/Square.png" alt="Planning a square">
-        </div>
-      </div>
-      <div class="step">
-        <h2>2. Drawing</h2>
-        <p>
-          Now let's draw it with your Capybara. Let's draw the first line by walking forward a few steps. 
-          Begin by trying with a number below 10 to ensure the line is neither too long nor too short.
-        </p>
-        <div class="image-container">
-          <img src="assets/images/step2/2.1.jpeg" alt="Code for drawing the first line">
-          <img src="assets/images/step2/2.2.jpeg" alt="Drawing the first line">
+          <img src="assets/images/placeholder.jpg" alt="Capybara with scattered letters of the alphabet">
         </div>
         <section class="hints-card">
           <p>
             <span>
-              <img src="assets/images/icons/Lightbulb.png" alt="Idea"> Hint: The order you stack the blocks is very important!
-              <img src="assets/images/blocks/looks/StartTrail.png" alt="Start Trail"> should be above 
-              <img src="assets/images/blocks/motion/Forward.png" alt="Forward">.
+              <img src="assets/images/icons/Lightbulb.png" alt="Idea"> Hint: Place your Capybara in the middle, facing the letter 
+              "A", as it's the first letter of the alphabet.
+            </span>
+          </p>
+        </section>
+      </div>
+      <div class="step">
+        <h2>2. Spelling a Secret Word</h2>
+        <p>
+          Now code your Capybara to go from one letter to another,
+          spelling a secret word. You can use <img src="assets/images/blocks/motion/NewForward.png"> to reach a letter, then 
+          <img src="assets/images/blocks/motion/turn R.jpg"> to aim to the next letter.
+        </p>
+        <p>In this example, the word was the answer for <i>“What’s your favourite place for vacations?”</i></p>
+        <div class="image-container">
+          <!-- <img src="assets/images/step2/2.1.jpeg" alt="Code for drawing the first line"> -->
+        </div>
+        <section class="hints-card">
+          <p>
+            <span>
+              <img src="assets/images/icons/Lightbulb.png" alt="Idea"> Hint: You can use
+              <img src="assets/images/blocks/looks/StartTrail.png" alt="Start Trail"> to paint while the Capybara is walking.
             </span>
           </p>
         </section>
