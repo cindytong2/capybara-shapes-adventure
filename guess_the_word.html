@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Capybara: Guess the Word</title>
-  <meta name="description" content="Guess the Word: A fun and interactive coding challenge for kids! Let's make our Capybara spell a secret word.">
-  <meta name="keywords" content="coding challenge, Scratch blocks, guess the word, interactive learning, educational">
+  <title>Guess the Word</title>
+  <meta name="description" content="Guess the Word: A fun and interactive coding challenge for kids!">
+  <meta name="keywords" content="coding challenge, Scratch blocks, guess the word, interactive learning, alphabet, words">
   <link rel="canonical" href="https://cindytong2.github.io/capybara-shapes-adventure/" />
   <link rel="icon" href="/assets/images/icons/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="styles.css"/>
@@ -20,7 +20,7 @@
 <body>
   <header class="header">
     <h1>GUESS THE WORD</h1>
-    <p>Let’s make our Capybara spell a secret word.</p>
+    <p>Let’s make our Capybara spell a secret word!</p>
   </header>
   <main class="main-content">
     <section class="instructions">
@@ -29,19 +29,19 @@
         <div class="icon-card">
           <div class="setup-label">SETUP</div>
           <div>
-            <img src="assets/images/icons/Participants.png" alt="Participants">
-            <p>Participants: 2</p>
+            <img src="assets/icons/Participants.png" alt="Participants">
+            <p>Participants: 1</p>
           </div>
           <div>
-            <img src="assets/images/icons/Devices.png" alt="Devices">
+            <img src="assets/icons/Devices.png" alt="Devices">
             <p>Devices: 1</p>
           </div>
         </div>
         <div class="image-container">
           <div class="blocks-label">BLOCKS</div>
-          <img src="assets/images/blocks/looks/StartTrail.png" alt="Start Trail Block"/>
-          <img src="assets/images/blocks/motion/NewForward.png" alt="Forward Block"/>
-          <img src="assets/images/blocks/motion/turn R.jpg" alt="Turn Right Block"/>
+          <img src="assets/blocks/looks/StartTrail.png" alt="Start Trail Block"/>
+          <img src="assets/blocks/motion/Forward.png" alt="Forward Block"/>
+          <img src="assets/blocks/motion/RotateRight.png" alt="Rotate Right Block"/>
         </div>
       </div>
     </section>
@@ -51,156 +51,69 @@
         <p>Scatter the letters of the alphabet on the floor.</p>
         <p>You can print and cut them, draw them on the floor, or write them however you want!</p>
         <div class="image-container">
-          <img src="assets/images/placeholder.jpg" alt="Capybara with scattered letters of the alphabet">
+          <img src="assets/guess-the-word/1.1.jpg" alt="Alphabet scattered on the floor">
         </div>
         <section class="hints-card">
           <p>
             <span>
-              <img src="assets/images/icons/Lightbulb.png" alt="Idea"> Hint: Place your Capybara in the middle, facing the letter 
-              "A", as it's the first letter of the alphabet.
+              <img src="assets/icons/Lightbulb.png" alt="Idea"> Hint: Place your Capybara in the middle, facing the letter "A", as it's the first letter of the alphabet.
             </span>
           </p>
         </section>
       </div>
       <div class="step">
         <h2>2. Spelling a Secret Word</h2>
-        <p>
-          Now code your Capybara to go from one letter to another,
-          spelling a secret word. You can use <img src="assets/images/blocks/motion/NewForward.png"> to reach a letter, then 
-          <img src="assets/images/blocks/motion/turn R.jpg"> to aim to the next letter.
+        <p>Now code your Capybara to go from one letter to another, spelling a secret word.</p>
+        <p>You can use <img src="assets/blocks/motion/Forward.png" alt="Forward"> to reach a letter,
+          then <img src="assets/blocks/motion/RotateRight.png" alt="Rotate Right"> to turn to the next letter.
         </p>
-        <p>In this example, the word was the answer for <i>“What’s your favourite place for vacations?”</i></p>
+        <p>In this example, the word was the answer for <b><i>"What's your favorite place for vacations?"</i></b></p>
         <div class="image-container">
-          <!-- <img src="assets/images/step2/2.1.jpeg" alt="Code for drawing the first line"> -->
+          <img src="assets/guess-the-word/2.1.jpg" alt="Capybara facing letter 'B'">
+          <img src="assets/guess-the-word/2.2.jpg" alt="Capybara facing letter 'E'">
+          <img src="assets/guess-the-word/2.3.jpg" alt="Capybara facing letter 'A'">
+          <img src="assets/guess-the-word/2.4.jpg" alt="Capybara facing letter 'C'">
+          <img src="assets/guess-the-word/2.5.jpg" alt="Capybara facing letter 'H'">
         </div>
         <section class="hints-card">
-          <p>
-            <span>
-              <img src="assets/images/icons/Lightbulb.png" alt="Idea"> Hint: You can use
-              <img src="assets/images/blocks/looks/StartTrail.png" alt="Start Trail"> to paint while the Capybara is walking.
-            </span>
-          </p>
-        </section>
+            <p>
+              <span>
+                <img src="assets/icons/Lightbulb.png" alt="Idea"> Hint: You can use
+                <img src="assets/blocks/looks/StartTrail.png" alt="Start Trail"> to paint while the Capybara is walking.
+              </span>
+            </p>
+          </section>
       </div>
-      <div class="step">
-        <h2>3. Rotation</h2>
-        <p>
-          To make the Capybara draw the second line, first it has to turn. Left or right, it's your choice!
-          Let's use "right" for this example. How much does it have to turn?
-        </p>
-        <div class="hints-card">
-          <p>
-            <span>
-              <img src="assets/images/icons/Lightbulb.png" alt="Idea"> The numbers in 
-              <img src="assets/images/blocks/motion/RotateRight.png" alt="Rotate Right"> are angles. So, if the Capybara is facing to the front, it should turn 90°
-            </span>
-          </p>
-          <img src="assets/images/step3/3.1.jpeg" alt="Rotation angles diagram">
-        </div>
-        <p>
-          So, let's add that rotation. Your code should look like this: 
-        </p>
-        <div class="image-container">
-          <img src="assets/images/step3/3.2.jpeg" alt="Code for drawing the second line">
-        </div>
-        <p>
-          Now, let's execute that code. This should be the final result:
-        </p>
-        <div class="image-container">
-          <img src="assets/images/step3/3.3.jpeg" alt="Final result">
-        </div>
-      </div>
-      <div class="step">
-        <h2>4. Repeat</h2>
-        <p>
-          Now that we have 1 side of the square, let's draw all of them by repeating our code 4 times.
-        </p>
-        <div class="image-container">
-          <img src="assets/images/step4/4.1.jpeg" alt="Code for drawing the third line">
-        </div>
-        <p><b>Congratulations! You drew a square.</b></p>
-        <div class="image-container">
-          <img src="assets/images/step4/4.2.jpeg" alt="Final result">
-        </div>
-      </div>
-    </section>
-
-    <div class="step">
-      <h2>Take It Further</h2>
-      <p>Now let's optimize the code, making it more efficient, getting the same outcome with less blocks.</p>
-      <p>How can we do it? What blocks seem to be repeated? How many times are they repeated?</p>
-      <p>As you can see, the blocks are repeated four times:</p>
-      <div class="image-container">
-        <img src="assets/images/step4/4.3.jpeg">
-      </div>
-      <p>So let's use:</p>
-      <div class="image-container">
-        <img src="assets/images/blocks/control/Repeat.png" alt="Repeat block example">
-      </div>
-      <div class="image-container">
-        <img src="assets/images/step4/4.4.jpeg" alt="Repeat">
-      </div>
-      <p>Now you'll have the same square with less coding blocks.</p>
-    </div>
-    <div class="step">
-      <h2>And Beyond!</h2>
-      <p>Now that you know how to draw, walk forward and rotate, let's try one of these drawings! Or imagine new ones and try them!</p>
-      <div class="image-container">
-        <img src="assets/images/step4/4.5.jpeg">
-        <img src="assets/images/step4/4.6.jpeg">
-      </div>
-      <div class="image-container">
-        <img src="assets/images/step4/4.7.jpeg">
-      </div>
-    </div>
-<!-- 
-    <section class="extra">
-      <h2>Take It Further</h2>
-      <p>Now let's optimize the code, making it more efficient, getting the same outcome with less blocks.</p>
-      <p>How can we do it? What blocks seem to be repeated? How many times are they repeated?</p>
-      <p>As you can see, the blocks are repeated four times:</p>
-      <div class="image-container">
-        <img src="assets/images/blocks/motion/Forward.png" alt="Forward 5">
-        <img src="assets/images/blocks/motion/RotateRight.png" alt="Rotate Right 90">
-      </div>
-      <p>So let's use:</p>
-      <img src="assets/images/blocks/control/Repeat.png" alt="Repeat block example">
-      <div class="image-container">
-        <img src="assets/images/extra/extra1.jpeg" alt="Code for drawing the square">
-      </div>
-    </section> -->
     <section class="block-inventory">
       <h2>Block Inventory</h2>
       <div class="events">
         <h3>EVENTS</h3>
-        <img src="assets/images/blocks/events/Touched.png" alt="When character is touched">
+        <img src="assets/blocks/events/Touched.png" alt="When character is touched">
       </div>
       <div class="motion">
         <h3>MOTION</h3>
-        <img src="assets/images/blocks/motion/Forward.png" alt="Forward 10">
-        <img src="assets/images/blocks/motion/RotateRight.png" alt="Rotate Right 120">
-        <img src="assets/images/blocks/motion/RotateLeft.png" alt="Rotate Left -200">
+        <img src="assets/blocks/motion/Forward.png" alt="Forward 10">
+        <img src="assets/blocks/motion/RotateRight.png" alt="Rotate Right 120">
+        <img src="assets/blocks/motion/RotateLeft.png" alt="Rotate Left -200">
       </div>
       <div class="looks">
         <h3>LOOKS</h3>
-        <img src="assets/images/blocks/looks/StartTrail.png" alt="Start Trail">
-        <img src="assets/images/blocks/looks/EndTrail.png" alt="End Trail">
+        <img src="assets/blocks/looks/StartTrail.png" alt="Start Trail">
+        <img src="assets/blocks/looks/EndTrail.png" alt="End Trail">
       </div>
       <div class="control">
         <h3>CONTROL</h3>
-        <img src="assets/images/blocks/control/Forever.png" alt="Forever">
-        <img src="assets/images/blocks/control/Repeat.png" alt="Repeat">
+        <img src="assets/blocks/control/Forever.png" alt="Forever">
+        <img src="assets/blocks/control/Repeat.png" alt="Repeat">
       </div>
     </section>
   </main>
   <footer class="footer">
-    <p>Made with love by <a href="https://ar.cs.princeton.edu/index.html#team">Princeton HCI</a>.</p>
+    <p>Made with <svg width="15" height="15" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 122.88 107.39"><defs><style>.cls-1{fill:#e74c3b;fill-rule:evenodd;}</style></defs><title>red-heart</title>
+      <path class="cls-1" d="M60.83,17.18c8-8.35,13.62-15.57,26-17C110-2.46,131.27,21.26,119.57,44.61c-3.33,6.65-10.11,14.56-17.61,22.32-8.23,8.52-17.34,16.87-23.72,23.2l-17.4,17.26L46.46,93.55C29.16,76.89,1,55.92,0,29.94-.63,11.74,13.73.08,30.25.29c14.76.2,21,7.54,30.58,16.89Z"/></svg> by <a href="https://ar.cs.princeton.edu/index.html#team">Princeton HCI</a>.</p>
     <p>Inspired by <a href="https://scratch.mit.edu/">Scratch</a> from the <a href="https://www.media.mit.edu/groups/lifelong-kindergarten/">Lifelong Kindergarten Group</a></a>.</p>
-    <svg width="15" height="15" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 122.88 107.39"><defs><style>.cls-1{fill:#e74c3b;fill-rule:evenodd;}</style></defs><title>red-heart</title>
-      <path class="cls-1" d="M60.83,17.18c8-8.35,13.62-15.57,26-17C110-2.46,131.27,21.26,119.57,44.61c-3.33,6.65-10.11,14.56-17.61,22.32-8.23,8.52-17.34,16.87-23.72,23.2l-17.4,17.26L46.46,93.55C29.16,76.89,1,55.92,0,29.94-.63,11.74,13.73.08,30.25.29c14.76.2,21,7.54,30.58,16.89Z"/>
-    </svg>
   </footer>
   
   <script src="script.js"></script>
 </body>
-</html>
+</html> 
