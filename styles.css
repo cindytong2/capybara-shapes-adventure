@@ -90,6 +90,34 @@ body::before {
     font-family: "IBM Plex Sans", sans-serif;
 }
 
+/* Styling for clocks container */
+.clocks-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+}
+
+.clock-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 1rem;
+}
+
+.time-label {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #2D2D2D;
+}
+
+.clock-item img {
+    max-width: 150px;
+    height: auto;
+}
+
 /* Icon Card */
 .icon-card {
     color: black;
@@ -285,6 +313,27 @@ h2 {
 }
 
 .step .image-container img:hover {
+    transform: scale(1.05);
+}
+
+/* Wide image container for larger images */
+.step .wide-image-container {
+    display: flex;
+    gap: 2rem;
+    margin: 1.5rem 0;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.step .wide-image-container img {
+    max-width: 400px;
+    height: auto;
+    border-radius: 12px;
+    transition: transform 0.2s ease;
+}
+
+.step .wide-image-container img:hover {
     transform: scale(1.05);
 }
 
